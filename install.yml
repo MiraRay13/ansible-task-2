@@ -1,6 +1,6 @@
 - hosts: all
   tasks:
-  - name: Include Other Tasks
+  - name: Include OS Tasks
     include: "{{ ansible_os_family }}.yml"
  
 

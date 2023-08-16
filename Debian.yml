@@ -3,3 +3,31 @@
     name: apache2
     update_cache: yes
     state: present
+
+- name: Stant and anable apache on Debian
+  systemd:
+    state: started
+    enabled: yes
+    name: apache2
+
+- name: Download Template on Debian
+  get_url:
+    url: https://www.free-css.com/assets/files/free-css-templates/download/page294/namari.zip
+    dest: /tmp/
+- name: Install unzip on Debian
+  yum:
+    name: unzip
+    update_cache: yes
+    state: present
+
+- name: Unarchive a Template on Debian
+  unarchive:
+    scr: namari.zip
+    dest: /var/www/html    
+    remote_src: yes
+
+- name: 
+  shell: mv /var/www/html/namari-website-template/* /var/www/html/
+
+
+
