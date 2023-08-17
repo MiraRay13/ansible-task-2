@@ -14,15 +14,16 @@
   get_url:
     url: https://www.free-css.com/assets/files/free-css-templates/download/page294/namari.zip
     dest: /tmp/
+
 - name: Install unzip on Debian
-  yum:
+  apt:
     name: unzip
     update_cache: yes
     state: present
 
 - name: Unarchive a Template on Debian
   unarchive:
-    scr: namari.zip
+    scr: /tmp/namari.zip
     dest: /var/www/html    
     remote_src: yes
 
