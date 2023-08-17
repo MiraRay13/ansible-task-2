@@ -21,14 +21,12 @@
     update_cache: yes
     state: present
 
-- name: Unarchive a Template on Debian
+- name: Unarchive Template on Debian
   unarchive:
-    scr: /tmp/namari.zip
+    src: /tmp/namari.zip
     dest: /var/www/html    
     remote_src: yes
 
-- name: 
-  shell: mv /var/www/html/namari-website-template/* /var/www/html/
 
 
 

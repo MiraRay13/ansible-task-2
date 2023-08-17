@@ -28,5 +28,3 @@
     src: /tmp/namari.zip
     dest: /var/www/html/
     remote_src: yes       
-
-    
